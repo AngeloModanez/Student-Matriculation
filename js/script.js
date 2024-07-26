@@ -1,0 +1,1 @@
+var shift = ["Manhã", "Tarde", "Noite"];
