@@ -28,7 +28,7 @@ var students = [
 var shift = [
     { id: 1, name: "Manhã" },
     { id: 2, name: "Tarde" },
-    { id: 3, name: "Manhã" }
+    { id: 3, name: "Noite" }
 ];
 var course = [
     { id: 1, name: "Lobotomia em Duendes" },
@@ -39,14 +39,30 @@ var course = [
 loadStudents();
 
 function loadStudents() {
-    for (let stud of students) {
+    for (stud of students) {
         addNewRow(stud);
     }
 }
 
+function register() {
+    var shiftCheck = parseInt(document.querySelector('input[name="radioShift"]:checked').id);
+
+    var stud = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phone: document.getElementById("inputPhone").value,
+        course: parseInt(document.getElementById("selectCourse").value),
+        shift: shiftCheck
+    };
+
+    addNewRow(stud);
+    students.push(stud);
+    document.getElementById("formStudent").reset();
+}
+
 function addNewRow(stud) {
     var table = document.getElementById("studentTable");
-
     var newRow = table.insertRow();
 
     var idNode = document.createTextNode(stud.id);
