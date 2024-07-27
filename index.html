@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-body-light">
-    <header class="p-3 bg-dark text-light shadow">
+    <header class="p-3 w-100 bg-dark text-light shadow">
         <h1 class="display-5 text-center">Cadastro de Alunos</h1>
     </header>
     <main>
@@ -41,28 +41,26 @@
                             </select>
                         </div>
                         <div class="row mb-3 mb-lg-0">
-                            <div class="col-10 col-lg-7 offset-1 form-label">
-                                <div class="row row-cols-2 row-cols-lg-6">
-                                    <span class="col">Turno:</span>
-                                    <div class="form-check col">
-                                        <input class="form-check-input" type="radio" name="radioShift" id="1"
-                                            value="option1" checked required />
-                                        <label for="1" class="form-check-label"> Manhã </label>
-                                    </div>
-                                    <div class="form-check col">
-                                        <input class="form-check-input" type="radio" name="radioShift" id="2"
-                                            value="option2" />
-                                        <label for="2" class="form-check-label"> Tarde </label>
-                                    </div>
-                                    <div class="form-check col">
-                                        <input class="form-check-input" type="radio" name="radioShift" id="3"
-                                            value="option3" />
-                                        <label for="3" class="form-check-label"> Noite </label>
-                                    </div>
+                            <label class="col-10 col-lg-1 offset-1 form-label">Turno:</label>
+                            <div class="col-10 col-lg-1 offset-1 offset-lg-0">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioShift" id="1"
+                                        value="option1" checked required />
+                                    <label for="1" class="form-check-label"> Manhã </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioShift" id="2"
+                                        value="option2" />
+                                    <label for="2" class="form-check-label"> Tarde </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioShift" id="3"
+                                        value="option3" />
+                                    <label for="3" class="form-check-label"> Noite </label>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-outline-secondary col-3 col-lg-2 col-xl-4 offset-2 shadow" type="submit">
+                        <button class="btn btn-outline-secondary col-4 offset-2 shadow" type="submit">
                             Cadastrar
                         </button>
                     </div>
@@ -78,12 +76,12 @@
                         <table class="table mb-5" id="studentTable">
                             <thead>
                                 <tr>
-                                    <th scope="col ">#</th>
-                                    <th scope="col ">Nome</th>
-                                    <th scope="col ">Email</th>
-                                    <th scope="col ">Telefone</th>
-                                    <th scope="col ">Curso</th>
-                                    <th scope="col ">Turno</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Telefone</th>
+                                    <th scope="col">Curso</th>
+                                    <th scope="col">Turno</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
