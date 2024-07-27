@@ -1,2 +1,69 @@
-var shift = ["Manhã", "Tarde", "Noite"];
-var course = ["Java", "Angular", "Magia Wicca", "Lobotomia em Duendes"];
+var students = [
+    {
+        id: 1,
+        name: "John Doe",
+        email: "johndoe@example.com",
+        phone: "1234567890",
+        course: 1,
+        shift: 1
+    },
+    {
+        id: 2,
+        name: "Jane Smith",
+        email: "janesmith@example.com",
+        phone: "0987654321",
+        course: 2,
+        shift: 2
+    },
+    {
+        id: 3,
+        name: "Alice Johnson",
+        email: "alicejohnson@example.com",
+        phone: "9876543210",
+        course: 3,
+        shift: 3
+    }
+];
+
+var shift = [
+    { id: 1, name: "Manhã" },
+    { id: 2, name: "Tarde" },
+    { id: 3, name: "Manhã" }
+];
+var course = [
+    { id: 1, name: "Lobotomia em Duendes" },
+    { id: 2, name: "Angular & Bootstrap" },
+    { id: 3, name: "Magia Wicca" }
+];
+
+loadStudents();
+
+function loadStudents() {
+    for (let stud of students) {
+        addNewRow(stud);
+    }
+}
+
+function addNewRow(stud) {
+    var table = document.getElementById("studentTable");
+
+    var newRow = table.insertRow();
+
+    var idNode = document.createTextNode(stud.id);
+    newRow.insertCell().appendChild(idNode);
+
+    var nameNode = document.createTextNode(stud.name);
+    newRow.insertCell().appendChild(nameNode);
+
+    var emailNode = document.createTextNode(stud.email);
+    newRow.insertCell().appendChild(emailNode);
+
+    var phoneNode = document.createTextNode(stud.phone);
+    newRow.insertCell().appendChild(phoneNode);
+
+    var courseNode = document.createTextNode(course[stud.course - 1].name);
+    newRow.insertCell().appendChild(courseNode);
+
+    var shiftNode = document.createTextNode(shift[stud.shift - 1].name);
+    newRow.insertCell().appendChild(shiftNode);
+}
