@@ -1,25 +1,25 @@
 var students = [
     {
         id: 1,
-        name: "John Doe",
-        email: "johndoe@example.com",
-        phone: "1234567890",
+        name: "Juliana Aguilar",
+        email: "juoliveira@gmail.com",
+        phone: "(11) 33347-0987",
         course: 1,
         shift: 1
     },
     {
         id: 2,
-        name: "Jane Smith",
-        email: "janesmith@example.com",
-        phone: "0987654321",
+        name: "Angelo Ferraz",
+        email: "bananababy.developer@hotmail.com",
+        phone: "(11) 64729-2387",
         course: 2,
         shift: 2
     },
     {
         id: 3,
-        name: "Alice Johnson",
-        email: "alicejohnson@example.com",
-        phone: "9876543210",
+        name: "Giuseppe Bruni",
+        email: "giugiufyrry@gmail.com",
+        phone: "(11) 99839-2666",
         course: 3,
         shift: 3
     }
@@ -51,7 +51,7 @@ function register() {
         id: students.length + 1,
         name: document.getElementById("inputName").value,
         email: document.getElementById("inputEmail").value,
-        phone: document.getElementById("inputPhone").value,
+        phone: document.getElementById("phone").value,
         course: parseInt(document.getElementById("selectCourse").value),
         shift: shiftCheck
     };
