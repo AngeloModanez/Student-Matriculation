@@ -16,23 +16,23 @@
     <main>
         <div class="container">
             <section>
-                <h1 class="display-6 my-5">Formulario de Cadastro:</h1>
+                <h1 class="display-6 my-4">Formulario de Cadastro:</h1>
                 <form onsubmit="register(); return false" class="text-start" id="formStudent">
                     <div class="row row-gap-lg-3">
                         <label for="inputName" class="col-10 col-lg-1 offset-1 form-label">Nome:</label>
-                        <div class="col-10 col-lg-9 offset-lg-0 offset-1 mb-4 mb-lg-0">
+                        <div class="col-10 col-lg-9 offset-1 offset-lg-0 mb-3 mb-lg-0">
                             <input type="text" class="form-control shadow-sm" id="inputName" required />
                         </div>
                         <label for="inputEmail" class="col-10 col-lg-1 offset-1 form-label">Email:</label>
-                        <div class="col-10 col-lg-4 offset-lg-0 offset-1 mb-4 mb-lg-0">
+                        <div class="col-10 col-lg-4 offset-1 offset-lg-0 mb-3 mb-lg-0">
                             <input type="email" class="form-control shadow-sm" id="inputEmail" required />
                         </div>
-                        <label for="phone" class="col-10 col-lg-1 offset-lg-0 offset-1 form-label">Telefone:</label>
-                        <div class="col-10 col-lg-4 offset-lg-0 offset-1 mb-5 mb-lg-0">
+                        <label for="phone" class="col-10 col-lg-1 offset-1 offset-lg-0 form-label">Telefone:</label>
+                        <div class="col-10 col-lg-4 offset-1 offset-lg-0 mb-3 mb-lg-0">
                             <input type="text" class="form-control shadow-sm" id="phone" required />
                         </div>
                         <label for="selectCourse" class="col-10 col-lg-1 offset-1 form-label">Curso:</label>
-                        <div class="col-10 col-lg-4 offset-1 offset-lg-0 mb-4 mb-lg-0">
+                        <div class="col-10 col-lg-4 offset-1 offset-lg-0 mb-3 mb-lg-0">
                             <select class="form-select shadow-sm" id="selectCourse" required>
                                 <option value="">Selecione um curso</option>
                                 <option value="1">Lobotomia em Duendes</option>
@@ -40,7 +40,7 @@
                                 <option value="3">Magia Wicca</option>
                             </select>
                         </div>
-                        <div class="row mb-3 mb-lg-0">
+                        <div class="row mb-4 mb-lg-0">
                             <label class="col-10 col-lg-1 offset-1 form-label">Turno:</label>
                             <div class="col-10 col-lg-1 offset-1 offset-lg-0">
                                 <div class="form-check">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-outline-secondary col-4 offset-2 shadow" type="submit">
+                        <button class="btn btn-outline-secondary col-4 offset-1 offset-lg-2 shadow" type="submit">
                             Cadastrar
                         </button>
                     </div>
@@ -70,10 +70,10 @@
             <hr class="my-5" />
 
             <section>
-                <h1 class="display-6 my-5">Alunos Cadastrados:</h1>
+                <h1 class="display-6 mb-4 mb-lg-5">Alunos Cadastrados:</h1>
                 <div class="row">
-                    <div class="col-10 offset-1">
-                        <table class="table mb-5" id="studentTable">
+                    <div class="col-10 mb-4 mb-lg-3 offset-1 table-responsive">
+                        <table class="table table-striped table-bordered" id="studentTable">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -91,6 +91,9 @@
             </section>
         </div>
     </main>
+    <footer class="bg-dark text-center text-white">
+        @Sistemas P&D
+    </footer>
 
     <script src="js/script.js "></script>
     <script src="js/jquery-3.6.0.min.js"></script>
