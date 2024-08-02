@@ -64,6 +64,7 @@ function register() {
 function addNewRow(stud) {
     var table = document.getElementById("studentTable");
     var newRow = table.insertRow();
+    var cell = null;
 
     var idNode = document.createTextNode(stud.id);
     newRow.insertCell().appendChild(idNode);
@@ -72,14 +73,22 @@ function addNewRow(stud) {
     newRow.insertCell().appendChild(nameNode);
 
     var emailNode = document.createTextNode(stud.email);
-    newRow.insertCell().appendChild(emailNode);
+    cell = newRow.insertCell();
+    cell.className = "d-none d-lg-table-cell";
+    cell.appendChild(emailNode);
 
     var phoneNode = document.createTextNode(stud.phone);
-    newRow.insertCell().appendChild(phoneNode);
+    cell = newRow.insertCell();
+    cell.className = "d-none d-lg-table-cell";
+    cell.appendChild(phoneNode);
 
     var courseNode = document.createTextNode(course[stud.course - 1].name);
-    newRow.insertCell().appendChild(courseNode);
+    cell = newRow.insertCell();
+    cell.className = "d-none d-lg-table-cell";
+    cell.appendChild(courseNode);
 
     var shiftNode = document.createTextNode(shift[stud.shift - 1].name);
-    newRow.insertCell().appendChild(shiftNode);
+    cell = newRow.insertCell();
+    cell.className = "d-none d-lg-table-cell";
+    cell.appendChild(shiftNode);
 }
